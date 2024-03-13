@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\sonid\\Downloads\\Multi\\commons-math3-3.6.1.jar"
+    ],
+    "git.ignoreLimitWarning": true
+}
