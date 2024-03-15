@@ -22,8 +22,8 @@ and output (String FILE_URL = "exp2/nsgaii_test29.txt"; - line 23 and String FIL
 then execute the code. 
 
 MOES + VMOES (MOES/src/main/Main.java): Change path in main like above. In MOES/src/algorithm/ES.java:
-- VMOES use code line 90 - 120 (try catch that use python code) and comment line 117 - 138.
-- MOES comment code line 123 - 144 (try catch that use python code) and ues code line 117 - 138 (opposite to VMOES).
+- VMOES use code line 90 - 120 (try catch that use python code) and comment line 131 - 144.
+- MOES comment code line 90 - 120 (try catch that use python code) and ues code line 131 - 144 (opposite to VMOES).
 - After changing as above, run MOES/src/main/Main.java
 
 Use exp2/hypervolume_pymoo.py to generate hypervolume figure, remember to change map name in line 9.
