@@ -30,7 +30,7 @@ numR = args.numR
 def inputObs(obstacle_list):
     # f = open("obs/input" + str(INPUT) + ".txt", "r")
     # f = open("obs/obstacles.txt", "r")
-    f = open("D:/WorkPlcae/Robot/FinalProject/Multi/input/obstacle_" + str(INPUT)+".txt", "r")
+    f = open("input/obstacle_" + str(INPUT)+".txt", "r")
     obstacle = []
     for line in f:
         if line == '-1' or line == "-1\n":
@@ -48,7 +48,7 @@ def inputObs(obstacle_list):
 
 
 def inputTarget(target_list):
-    f = open("D:/WorkPlcae/Robot/FinalProject/Multi/input/input_" + str(INPUT) + ".txt", "r")
+    f = open("input/input_" + str(INPUT) + ".txt", "r")
     for line in f:
         if line == '-1' or line == "-1\n":
             return target_list
