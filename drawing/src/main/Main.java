@@ -82,8 +82,8 @@ public class Main {
 
 			// To write all point into a file
 			try {
-				String FILE_URL_TESTING = "testing/moes_test_point_old" + numberTeString + ".txt";
-				File file_test = new File(FILE_URL_TESTING);
+				String FILE_URL_PATH_POINT = "path_point/moes_test_point_old" + numberTeString + ".txt";
+				File file_test = new File(FILE_URL_PATH_POINT);
 				if (!file_test.exists()) {
 					file_test.createNewFile();
 				}
