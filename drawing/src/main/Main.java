@@ -25,7 +25,7 @@ public class Main {
 		// while (count < 20) {
 
 		long time = System.currentTimeMillis();
-		String FILE_URL = "exp2/moes_test26.txt";
+		String FILE_URL = "result/moes_test26.txt";
 		File file = new File(FILE_URL);
 
 		String numberTeString = "16";
