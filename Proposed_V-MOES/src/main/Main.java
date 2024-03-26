@@ -116,11 +116,11 @@ public class Main {
 			for (Path path : es.paretoFront) {
 				if (path.points[0] != null) {
 				    // Output path points to file
-                    String FILE_URL_PATH_POINT = "path_point/vmoes_test_point_" + numberTeString + ".txt";
+                    String FILE_URL_PATH_POINT = "output/path_point/vmoes_test_point_" + numberTeString + ".txt";
                     File file_test = new File(FILE_URL_PATH_POINT);
                     if (!file_test.exists()) {
                         file_test.createNewFile();
-                    }path_point
+                    }
                     FileWriter fw_path_point = new FileWriter(file_test.getAbsoluteFile(), true);
                     BufferedWriter bw_path_point = new BufferedWriter(fw_path_point);
 

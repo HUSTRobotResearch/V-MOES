@@ -63,7 +63,7 @@ the baseline methods on all the scenarios.
 
 #### Use `output/hypervolume_pymoo.py` to generate hypervolume figure, remember to change the map name in line 9.
 
-#### Use `drawing/src/drawing/Main.java` to generate map figure (including the path of 4 algorithms), remember to change the file path in lines 23 - 39.
+#### Use `visualization/src/drawing/Main.java` to generate map figure (including the path of 4 algorithms), remember to change the file path in lines 23 - 39.
 
 ## Chosen maps for final validation (in folder `input/`):
 - `map1a`: map 16

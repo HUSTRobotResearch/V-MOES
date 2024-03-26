@@ -73,7 +73,7 @@ public class Main {
 					if (((double) Math.round(path.pathSmooth() * 10000) / 10000 != 0.0)
 							&& ((double) (path.pathDistance()) < 200)) {
 						try {
-							String FILE_URL_PATH_POINT = "path_point/nsgaii_test_point_" + numberTeString + ".txt";
+							String FILE_URL_PATH_POINT = "output/path_point/nsgaii_test_point_" + numberTeString + ".txt";
 							File file_test = new File(FILE_URL_PATH_POINT);
 							if (!file_test.exists()) {
 								file_test.createNewFile();
