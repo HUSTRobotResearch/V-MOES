@@ -52,96 +52,32 @@ public class ES {
         this.numberTeString = numberTeString;
     }
 
-    // public void initialize(int numR) {
-    // standardDevi = new double[numR];
-    // mean = new double[numR];
-
-    // do {
-    // double pointy[] = new double[numR];
-    // Point points[] = new Point[numR];
-    // for (int j = 0; j < numR; j++) {
-    // standardDevi[j] = random.nextDouble() * (maxVariance - minVariance) +
-    // minVariance;
-    // do {
-    // pointy[j] = random.nextDouble() * (maxPointy - minPointy) + minPointy;
-    // points[j] = Path.convertPointToPoint(pointy[j], (j + 1) * R, startPoint,
-    // endPoint);
-    // } while (!points[j].inCoordinate());
-    // }
-    // initialCandidate = new Path(numR, R, pointy, points);
-    // } while (pathCollision(initialCandidate) == true);
-
-    // identityMatrix = new double[numR][numR];
-    // for (int i = 0; i < numR; i++) {
-    // identityMatrix[i][i] = 1;
-    // }
-    // gBest = initialCandidate;
-    // gBestDistance = initialCandidate;
-    // gBestSafety = initialCandidate;
-    // gBestSmooth = initialCandidate;
-    // }
-
     public void initialize(int numR) {
         standardDevi = new double[numR];
         mean = new double[numR];
 
-        // Use 90 - 120 try catch block if VMOES
+        double tmp = Path.convertPointToPointToBeginning(16.635425876805183,
+        58.090775125257885, R,
+        startPoint, endPoint);
+        System.out.println(tmp);
+        Point pointstest = Path.convertPointToPoint(1.1224148098978217, R,
+        startPoint, endPoint);
+        System.out.println(pointstest.x + " " + pointstest.y);
 
-        try {
-            ProcessBuilder builder = new ProcessBuilder("python",
-                    System.getProperty("user.dir") + "\\init_popu.py",
-                    numberTeString, String.valueOf(numR));
-            Process process = builder.start();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            BufferedReader readers = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-            String lines = null;
-            int j = 0;
-            double pointy[] = new double[numR];
-            Point points[] = new Point[numR];
-            while ((lines = reader.readLine()) != null) {
-                pointy[j] = Double.parseDouble(lines);
-                points[j] = Path.convertPointToPoint(pointy[j], (j + 1) * R, startPoint,
-                        endPoint);
-                j++;
-                // System.out.println("lines" + lines);
-            }
-            for (int i = 0; i < numR; i++) {
-                standardDevi[i] = random.nextDouble() * (maxVariance - minVariance) +
-                        minVariance;
-            }
-            initialCandidate = new Path(numR, R, pointy, points);
-            // System.out.println(pathCollision(initialCandidate));
-            while ((lines = readers.readLine()) != null) {
-                System.out.println("Error lines" + lines);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        do {
+        double pointy[] = new double[numR];
+        Point points[] = new Point[numR];
+        for (int j = 0; j < numR; j++) {
+        standardDevi[j] = random.nextDouble() * (maxVariance - minVariance) +
+        minVariance;
+        do {
+        pointy[j] = random.nextDouble() * (maxPointy - minPointy) + minPointy;
+        points[j] = Path.convertPointToPoint(pointy[j], (j + 1) * R, startPoint,
+        endPoint);
+        } while (!points[j].inCoordinate());
         }
-
-        // Use 123 - 144 block if MOES
-
-        // double tmp = Path.convertPointToPointToBeginning(16.635425876805183,
-        // 58.090775125257885, R,
-        // startPoint, endPoint);
-        // System.out.println(tmp);
-        // Point pointstest = Path.convertPointToPoint(1.1224148098978217, R,
-        // startPoint, endPoint);
-        // System.out.println(pointstest.x + " " + pointstest.y);
-
-        // do {
-        // double pointy[] = new double[numR];
-        // Point points[] = new Point[numR];
-        // for (int j = 0; j < numR; j++) {
-        // standardDevi[j] = random.nextDouble() * (maxVariance - minVariance) +
-        // minVariance;
-        // do {
-        // pointy[j] = random.nextDouble() * (maxPointy - minPointy) + minPointy;
-        // points[j] = Path.convertPointToPoint(pointy[j], (j + 1) * R, startPoint,
-        // endPoint);
-        // } while (!points[j].inCoordinate());
-        // }
-        // initialCandidate = new Path(numR, R, pointy, points);
-        // } while (pathCollision(initialCandidate) == true);
+        initialCandidate = new Path(numR, R, pointy, points);
+        } while (pathCollision(initialCandidate) == true);
 
         identityMatrix = new double[numR][numR];
         for (int i = 0; i < numR; i++) {
@@ -204,7 +140,6 @@ public class ES {
     }
 
     public void bubbleSort(Path arr[], int n) {
-        // int n = children;
         for (int i = 0; i < n - 1; i++)
             for (int j = 0; j < n - i - 1; j++)
                 if (arr[j].distance > arr[j + 1].distance) {

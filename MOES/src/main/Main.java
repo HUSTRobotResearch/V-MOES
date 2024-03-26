@@ -33,11 +33,11 @@ public class Main {
 		String numberTeString = "8";
 		// Create GUI
 		GUIRobotics gui = new GUIRobotics(600, 100, 10);
-		gui.generateEnvironment("old_input/obstacle_" + numberTeString + ".txt");
+		gui.generateEnvironment("input/obstacle_" + numberTeString + ".txt");
 
 		// Read input data
-		Graph graph = new Graph("old_input/obstacle_" + numberTeString + ".txt");
-		LinkedList<Point> pointsToVisit = readPointData("old_input/input_" + numberTeString + ".txt");
+		Graph graph = new Graph("input/obstacle_" + numberTeString + ".txt");
+		LinkedList<Point> pointsToVisit = readPointData("input/input_" + numberTeString + ".txt");
 
 			ArrayList<Point> resultDistance = new ArrayList<Point>();
 			ArrayList<Point> resultSafety = new ArrayList<Point>();
@@ -116,7 +116,7 @@ public class Main {
 			for (Path path : es.paretoFront) {
 				if (path.points[0] != null) {
 				    // Output path points to file
-                    String FILE_URL_TESTING = "testing/vmoes_test_point_" + numberTeString + ".txt";
+                    String FILE_URL_TESTING = "testing/moes_test_point_" + numberTeString + ".txt";
                     File file_test = new File(FILE_URL_TESTING);
                     if (!file_test.exists()) {
                         file_test.createNewFile();
