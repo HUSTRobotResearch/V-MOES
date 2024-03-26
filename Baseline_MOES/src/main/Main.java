@@ -27,7 +27,7 @@ public class Main {
 		long time = System.currentTimeMillis();
 
 		// Change input file here
-		String FILE_URL = "result/moes_test_old_30.txt";
+		String FILE_URL = "output/moes_test_old_30.txt";
 		int numR = 10;
 		File file = new File(FILE_URL);
 		String numberTeString = "8";

@@ -21,7 +21,7 @@ public class Main {
 		while (count < 1) {
 			final long startTime = System.currentTimeMillis();
 			// Change the test number here
-			String FILE_URL = "result/nsgaii_test29.txt";
+			String FILE_URL = "output/nsgaii_test29.txt";
 			File file = new File(FILE_URL);
 			String numberTeString = "9";
 
@@ -47,7 +47,7 @@ public class Main {
 				 gui.canvas.drawLines(result, startEndPoints);
 				 }
 
-				System.out.println("result" + result);
+				System.out.println("output" + result);
 
 				System.out.println("Done");
 				System.out.println("Path Distance: " + (double) Math.round(nsgaii.pathDistance * 10000) / 10000);

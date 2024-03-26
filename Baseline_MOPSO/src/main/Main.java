@@ -22,7 +22,7 @@ public class Main {
 		while (count < 20) {
 			long time = System.currentTimeMillis();
 			// Change the test number here
-			String FILE_URL = "result/mopso_test30.txt";
+			String FILE_URL = "output/mopso_test30.txt";
 			File file = new File(FILE_URL);
 			String numberTeString = "30";
 			// Create GUI
