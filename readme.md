@@ -67,12 +67,12 @@ the baseline methods on all the scenarios.
 
 ## Chosen maps for final validation (in folder `input/`):
 - `map1a`: map 16
-- `map1b`: map 21
+- `map1b`: map 27
 - `map2a`: map 18
 - `map2b`: map 28
 - `map3a`: map 22
 - `map3b`: map 24
 - `map4a`: map 26
-- `map4b`: map 27
+- `map4b`: map 21
 - `map5a`: map 29
 - `map5b`: map 30
